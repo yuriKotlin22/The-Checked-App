@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "233412384912",
+    "project_id": "the-checked-49a3a",
+    "storage_bucket": "the-checked-49a3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:233412384912:android:8ad4df71aeb785f1a4a015",
+        "android_client_info": {
+          "package_name": "com.example.thechecked20"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "233412384912-jjdd2raoev6vpmhokl3cp7ahlgo5bunq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVWn7fPt3E5kgGu9g0HShDgBAMihcILc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "233412384912-jjdd2raoev6vpmhokl3cp7ahlgo5bunq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

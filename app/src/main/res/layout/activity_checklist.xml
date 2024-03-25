@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/doc_checklist"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-16dp">
+
+
+        <LinearLayout
+            android:id="@+id/check_tipo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6sp"
+            android:layout_marginEnd="6sp"
+            android:orientation="vertical"
+            android:padding="6sp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="36sp"
+                android:layout_marginBottom="10sp">
+
+                <ImageView
+                    android:id="@+id/btn_pdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="20sp"
+                    android:src="@drawable/download_pdf"
+                    android:layout_marginStart="300dp"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/data_doc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10sp"
+                    android:layout_marginTop="10sp"
+                    android:padding="10sp"
+                    android:text="Data: "
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <com.vicmikhailau.maskededittext.MaskedEditText
+                    android:id="@+id/txt_data"
+                    android:layout_width="16mm"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12sp"
+                    android:background="@drawable/backgroud_borda_redonda"
+                    android:elevation="4sp"
+                    android:hint="       /    /  "
+                    android:inputType="number"
+                    android:padding="8sp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:mask="##/##/##" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16sp"
+                android:hint="NOME"
+                android:padding="6sp"
+                app:boxStrokeColor="#1932DA"
+                app:helperText="Obrigatório*"
+                app:helperTextTextColor="#F30505"
+                app:hintTextColor="#9C000000"
+                app:layout_constraintTop_toBottomOf="@+id/txt_data"
+                tools:layout_editor_absoluteX="6dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8sp"
+                    android:layout_marginEnd="8sp"
+                    android:inputType="text"
+                    android:maxLength="20"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="ENDEREÇO"
+                    android:padding="6sp"
+                    app:boxStrokeColor="#1932DA"
+                    app:hintTextColor="#9C000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_endereco"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6sp"
+                        android:hint="CONTATO"
+                        app:boxStrokeColor="#1932DA"
+                        app:hintTextColor="#9C000000">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_contato"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:maxLength="11"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="6sp"
+                        android:hint="APARELHO (MODELO)"
+                        app:boxStrokeColor="#1932DA"
+                        app:helperText="Obrigatório*"
+                        app:helperTextTextColor="#F30505"
+                        app:hintTextColor="#9C000000">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_aparelho"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLength="20"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10sp"
+                        android:hint="DEFEITO"
+                        app:boxStrokeColor="#1932DA"
+                        app:hintTextColor="#9C000000">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txt_defeitos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/check_rAvancado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="46sp"
+                    android:layout_marginTop="8sp"
+                    android:background="@drawable/backgroud_borda_redonda"
+                    android:drawableRight="@drawable/reparo_avancado3"
+                    android:drawablePadding="8sp"
+                    android:padding="4sp"
+                    android:text="Reparo Avançado"
+                    android:textColor="#A4000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12sp"
+                android:background="@drawable/backgroud_borda_redonda"
+                android:elevation="4sp"
+                android:orientation="vertical"
+                android:padding="6sp">
+
+                <TextView
+                    android:id="@+id/titulo_entrada"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="22sp"
+                    android:text="Checklist de Entrada"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <CheckBox
+                    android:id="@+id/check_cameraFront"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camera Frontal"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_cameraBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camera Traseira"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_microfones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Microfones"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_somExterno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alto Falante"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_redes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redes"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chip da Operadora"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_carregamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carregamento"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_sensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sensor de Aproximidade"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biometria | Face ID"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8sp"
+                    android:background="@color/white"
+                    android:hint="Outras observações"
+                    android:textColor="@color/black"
+                    app:boxStrokeColor="#1932DA"
+                    app:hintTextColor="#9C000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_obs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="22sp"
+                        android:textStyle="italic" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="16sp"
+                android:layout_marginEnd="32sp"
+                android:hint="Valor Total"
+                android:padding="6sp"
+                app:boxStrokeColor="#1932DA"
+                app:hintTextColor="#9C000000"
+                app:startIconDrawable="@drawable/icon_money">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/valor_total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14sp"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Valor de Entrada"
+                    android:inputType="number"
+                    android:textSize="18sp"
+                    app:boxStrokeColor="#1932DA"
+                    app:hintTextColor="#9C000000"
+                    app:startIconDrawable="@drawable/icon_money">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/valor_entrada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:layout_marginStart="14sp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="14sp"
+                        android:hint="Forma de Pagamento"
+                        app:boxStrokeColor="#1932DA"
+                        app:hintTextColor="#9C000000"
+                        app:startIconDrawable="@drawable/icon_wallet">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Pagamento Restante"
+                            app:boxStrokeColor="#1932DA"
+                            app:hintTextColor="#9C000000"
+                            app:startIconDrawable="@drawable/icon_money">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/pag_restante"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/forma_pag"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12sp"
+                android:layout_marginBottom="16sp"
+                android:background="@drawable/backgroud_borda_redonda"
+                android:elevation="4sp"
+                android:orientation="vertical"
+                android:padding="6sp">
+
+                <TextView
+                    android:id="@+id/titulo_saida"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="22sp"
+                    android:text="Checklist de Saída"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <CheckBox
+                    android:id="@+id/check_cameraFront_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camera Frontal"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_cameraBack_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Camera Traseira"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_microfones_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Microfones"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_somExterno_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alto Falante"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_redes_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redes"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_chip_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chip da Operadora"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_carregamento_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Carregamento"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_sensor_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sensor de Aproximidade"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/check_id_saida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Biometria | Face ID"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8sp"
+                    android:background="@color/white"
+                    android:hint="Outras observações"
+                    app:boxStrokeColor="#1932DA"
+                    app:hintTextColor="#9C000000">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txt_obs_saida"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:inputType="text"
+                        android:textSize="22sp"
+                        android:textStyle="italic" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_salvar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginTop="54sp"
+        android:backgroundTint="#2196F3"
+        android:src="@drawable/baseline_check_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

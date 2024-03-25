@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ListaActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="1"
+        tools:listitem="@layout/itens_lista" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8sp"
+        android:layout_marginEnd="8sp"
+        android:elevation="4sp"
+        android:orientation="horizontal"
+        android:padding="2sp"
+        android:layout_marginTop="4sp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_lista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btn_voltar"
+            android:layout_width="36dp"
+            android:layout_height="38sp"
+            android:padding="2sp"
+            android:layout_marginEnd="312sp"
+            android:src="@drawable/icon_circle_left" />
+
+        <ImageView
+            android:id="@+id/img_busca"
+            android:layout_width="36dp"
+            android:layout_height="38sp"
+            android:padding="2sp"
+            android:layout_marginTop="2sp"
+            android:src="@drawable/img_buscar_checklist" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
